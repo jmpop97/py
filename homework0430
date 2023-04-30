@@ -1,0 +1,65 @@
+class Car:
+    def __init__(self, model, color,speed):
+        self.model = model
+        self.color = color
+        self.speed = speed
+        
+    def accelerate(self, a):
+        self.speed += a
+            
+    def brake(self, a):
+        self.speed -= a
+        if self.speed < 0:
+            self.speed = 0
+            
+    def get_speed(self):
+        return self.speed
+
+
+
+#########################################
+
+class Animal:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        
+    def speak(self):
+        print("The animal speaks.")
+        
+class Dog(Animal):   
+    def speak(self):
+        print("Woof!")
+        
+class Cat(Animal):
+    def speak(self):
+        print("Meow!")
+
+
+
+##########################################3333
+class Shape:
+    def get_area(self):
+        pass
+    
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+        
+    def area(self):
+        return 3.14 * self.radius ** 2
+    
+class Square(Shape):
+     def __init__(self, side):
+         self.side = side
+         
+     def area(self):
+         return self.side ** 2
+     
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    def area(self):
+        return self.length * self.width

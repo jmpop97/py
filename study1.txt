@@ -1,0 +1,29 @@
+.count  
+    문자갯수세기
+find    
+    처음 나오는 위치 찾기(실패시 -1)
+index
+    ValueError나옴
+try: a
+except: b
+    a진행중 에러뜨면 b로 가기
+"a".join("b")
+    b에서 a제거하며 합치기
+text.upper()
+text.lower()
+    대소문자바꾸기
+.split(',') ,로 나누고 list
+delf list[n]
+    list에서 [n]요소 제거
+append
+    추가
+sort
+    오름차순으로 정렬
+insert(a,b)
+    [a]에 b추가
+remove(a)
+    [a]삭제
+pop(a)
+    a를 빼고 return값으로 선언
+extend
+    요소들 추가

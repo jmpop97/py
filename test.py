@@ -20,10 +20,9 @@ class DogP:
             case("N"):
                 dir = [-1, 0]
             case __:
-                dir = 0
+                dir = [0, 0]
         # 움직임 검사
 
-        print(direction)
         try:
             check_place_0 = self.place[0]
             check_place_1 = self.place[1]
@@ -31,17 +30,17 @@ class DogP:
                 # print("1번")
                 for i in list(range(int(direction[2]))):
                     if park[check_place_0+dir[0]*(i+1)][check_place_1] == "X":
-                        print("bug")
+                        # print("bug")
                         raise
 
             else:
-                print("2번")
+                # print("2번")
                 raise
             if check_place_1+dir[1]*int(direction[2]) >= 0 and len(park[0]) > check_place_1+dir[1]*int(direction[2]):
                 # print("3번")
                 for i in list(range(int(direction[2]))):
                     if park[check_place_0][check_place_1+dir[1]*(i+1)] == "X":
-                        print("bug")
+                        # print("bug")
                         raise
             else:
                 # print("4번")
@@ -60,6 +59,7 @@ def solution(park, routes):
     for i in park:
         if (i.find("S") >= 0):
             dogp = DogP([park.index(i), i.index("S")])
+            print(type(dogp))
             for route_dir in routes:
                 dogp.movedog(route_dir, park)
             break
